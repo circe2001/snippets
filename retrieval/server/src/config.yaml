@@ -1,0 +1,14 @@
+http:
+  host: "localhost"
+  port: 8080
+
+db:
+  postgres:
+    host: "localhost"
+    port: 5432
+    username: "postgres"
+    password: "coolman"
+    database: "postgres"
+
+storages:
+  rootFolder: "d:/data/nest_sample"
