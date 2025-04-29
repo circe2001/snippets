@@ -14,13 +14,13 @@ CREATE TYPE status_enum AS ENUM ('0', '1');
 CREATE TABLE public.region (
   id VARCHAR(40) PRIMARY KEY,               -- 主键（自增）
   name VARCHAR(40),                         -- 省市区名称
-  parentid VARCHAR(40),                             -- 上级ID
+  parentid VARCHAR(40),                     -- 上级ID
   shortname VARCHAR(40),                    -- 简称
   leveltype INT,                            -- 级别: 0-中国；1-省；2-市；3-区县
   citycode VARCHAR(7),                      -- 城市代码
   zipcode VARCHAR(6),                       -- 邮编（中国邮编为6位）
-  lng DECIMAL(9,6),                        -- 经度（数值类型，保留6位小数）
-  lat DECIMAL(8,6),                        -- 纬度（数值类型，保留6位小数）
+  lng DECIMAL(9,6),                         -- 经度（数值类型，保留6位小数）
+  lat DECIMAL(8,6),                         -- 纬度（数值类型，保留6位小数）
   pinyin VARCHAR(40),                       -- 拼音
   status status_enum DEFAULT '1'            -- 状态（使用枚举类型）
 );
